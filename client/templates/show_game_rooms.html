@@ -1,0 +1,22 @@
+<template name='showGameRooms'>
+    <div id='available-games-rooms'> 
+        <ul>
+            {{#each games}}
+                {{> game}}
+            {{/each}}
+        </ul>
+    </div>
+    {{> createGameRoom}}
+</template>
+
+
+<template name='game'>
+    <li><a class='game-url' href="/games/{{_id}}">{{_id}}</a></li>
+</template>
+
+<template name='createGameRoom'>
+    <form class='create-game-room'>
+        Create New Game and Enter: <br/>
+        <input type='text' name='create_game_input' />
+    </form>
+</template>
